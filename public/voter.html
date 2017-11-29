@@ -13,7 +13,7 @@
 <button type="submit">Add Candidate</button>
 </form>
 <h1>Current Candidates</h1>
-<div ng-repeat="comment in comments | orderBy: '-upvotes' | 'Name' ">
+<div ng-repeat="comment in comments | orderBy: '-upvotes'">
     {{comment.title}}
    <!-- <span class="glyphicon glyphicon-remove" ng-click="delete(comment)"></span> -->
 <!-- <span class="glyphicon glyphicon-thumbs-up" ng-click="incrementUpvotes(comment)"></span> -->
