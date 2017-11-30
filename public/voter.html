@@ -8,15 +8,31 @@
   width: 100px;
   height: 100px;
 }
+.admin{
+  background-color:lightgreen;
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+
+}
+.input{
+  padding: 25px;
+}
+body{
+  background-color: lightgrey;
+}
 </style>
 </head>
 <body ng-app="comment" ng-controller="MainCtrl">
+  <div class="admin">
   <h1>Shopping Interface</h1>
+  </div>
 <!-- <form ng-submit="addComment()"> -->
 <!-- <input type="text" ng-model="formContent"></input> -->
 
 <!-- </form> -->
+<div class="admin">
 <h1>Current Products</h1>
+</div>
 <div ng-repeat="comment in comments | orderBy: 'title'">
     <input type="checkbox" ng-model="comment.doVote">
     {{comment.title}} - price: {{comment.price}}

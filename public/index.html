@@ -8,17 +8,35 @@
   width: 100px;
   height: 100px;
 }
+.admin{
+  background-color:lightcoral;
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+
+}
+.input{
+  padding: 25px;
+}
+body{
+  background-color: lightgrey;
+}
 </style>
 </head>
 <body ng-app="comment" ng-controller="MainCtrl">
+  <div class = "admin">
   <h1>Store Management Interface</h1>
+  </div>
+<div class ="input">
 <form ng-submit="addComment()">
-<p>Product Name</p><input type="text" ng-model="formContent"></input>
-<p>Price</p><input type="text" ng-model="formContent2"></input>
-<p>Picture URL</p><input type="text" ng-model="formContent3"></input>
+<h4>Product Name</h4><input type="text" ng-model="formContent"></input>
+<h4>Price</h4><input type="text" ng-model="formContent2"></input>
+<h4>Picture URL</h4><input type="text" ng-model="formContent3"></input>
 <button type="submit">Add Product</button>
 </form>
+</div>
+<div class ="admin">
 <h1>Current Products</h1>
+</div>
 <div ng-repeat="comment in comments | orderBy: ['-upvotes', 'title']">
    <span class="glyphicon glyphicon-remove" ng-click="delete(comment)"></span>
 <!-- <span class="glyphicon glyphicon-thumbs-up" ng-click="incrementUpvotes(comment)"></span> -->
