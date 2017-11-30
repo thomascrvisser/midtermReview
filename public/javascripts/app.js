@@ -64,6 +64,7 @@ angular.module('comment',[])
 					if(numToSend==numSent){
 						$scope.votedCans = toSend;
 						$scope.getAll();
+						document.getElementById("submitted").style.display = "block";
 					}
 			});
 		}
