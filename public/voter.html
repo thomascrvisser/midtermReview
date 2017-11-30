@@ -16,7 +16,7 @@
 <div ng-repeat="comment in comments | orderBy: 'title'">
     <input type="checkbox" ng-model="comment.doVote">
     {{comment.title}} - price: {{comment.price}} {{comment.URL}}
-   
+   <img class ='pic' ng-src="{{comment.URL}}" />
 
 </div>
 <button ng-click="vote()">Submit Purchase</button>
