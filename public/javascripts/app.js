@@ -2,7 +2,8 @@ angular.module('comment',[])
 	.controller('MainCtrl',[
 	'$scope','$http',
 	function($scope,$http){
-	  $scope.comments = [];
+		$scope.comments = [];
+		$scope.votedCans = [];
 	  $scope.create = function(comment) {
    		 return $http.post('/comments', comment).success(function(data){
       			$scope.comments.push(data);
@@ -61,6 +62,7 @@ angular.module('comment',[])
 			$http.put("/comments/" + toSend[i]._id + "/upvote").success(function(resp){
 					numSend++;
 					if(numToSend==numSent){
+						$scope.votedCans = toSend;
 						$scope.getAll();
 					}
 			});
