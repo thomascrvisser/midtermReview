@@ -58,13 +58,18 @@ angular.module('comment',[])
 			}
 			}
 		for(i=0; i <toSend.length; i++){
-			$http.put("/comments/" + toSend[i]._id).success(function(resp){
+			$http.put("/comments/" + toSend[i]._id + '/upvote').success(function(resp){
 					numSend++;
 					if(numToSend==numSent){
 						$scope.getAll();
 					}
 			});
 		}
-		}
+	}
+
+
+
+
+
 	}
 ]);
