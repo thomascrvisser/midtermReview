@@ -2,7 +2,8 @@ var mongoose = require('mongoose');
 var CommentSchema = new mongoose.Schema({
   title:String,
   price:String,
-  upvotes:{type: Number, default: 0}
+  upvotes:{type: Number, default: 0},
+  URL:String
  });
 
 CommentSchema.methods.upvote = function(cb) {

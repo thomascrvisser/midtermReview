@@ -10,17 +10,21 @@ angular.module('comment',[])
     		});
   	};  
 	$scope.addComment = function() {
-		  var newObject = {title:$scope.formContent,upvotes:0};
+		  var newObject = {title:$scope.formContent,price:$scope.formContent2,URL:$scope.formContent3,upvotes:0};
 		  $scope.create({
-        	     title: $scope.formContent,
+							 title: $scope.formContent,
+							 price: $scope.formContent2,
+							 URL: $scope.formContent3,
         	     upvotes: 0,
       		});
 	
-		  $scope.formContent = "";
+			$scope.formContent = "";
+			$scope.formContent2 = "";
+			$scope.formContent3 = "";
 		};
 
 
-		
+
 		$scope.incrementUpvotes = function(comment) {
 		  $scope.upvote(comment);;  
 		};
