@@ -7,16 +7,16 @@
 
 </head>
 <body ng-app="comment" ng-controller="MainCtrl">
-  <h1>Administrative Interface</h1>
+  <h1>Store Management Interface</h1>
 <form ng-submit="addComment()">
 <input type="text" ng-model="formContent"></input>
-<button type="submit">Add Candidate</button>
+<button type="submit">Add Product</button>
 </form>
 <h1>Current Candidates</h1>
 <div ng-repeat="comment in comments | orderBy: ['-upvotes', 'title']">
    <span class="glyphicon glyphicon-remove" ng-click="delete(comment)"></span>
 <!-- <span class="glyphicon glyphicon-thumbs-up" ng-click="incrementUpvotes(comment)"></span> -->
-{{comment.title}} - votes: {{comment.upvotes}}
+{{comment.title}} - price {{comment.price}} - ordered: {{comment.upvotes}}
 </div>
 
 </body>

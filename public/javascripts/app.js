@@ -18,6 +18,9 @@ angular.module('comment',[])
 	
 		  $scope.formContent = "";
 		};
+
+
+		
 		$scope.incrementUpvotes = function(comment) {
 		  $scope.upvote(comment);;  
 		};
