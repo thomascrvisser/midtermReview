@@ -15,13 +15,8 @@
 <h1>Current Candidates</h1>
 <div ng-repeat="comment in comments | orderBy: '-upvotes'">
     {{comment.title}}
-    <input type="checkbox" ng-checked="incrementUpvotes(comment)"></span>
-   <!-- <span class="glyphicon glyphicon-remove" ng-click="delete(comment)"></span> -->
-<!-- <span class="glyphicon glyphicon-thumbs-up" ng-click="incrementUpvotes(comment)"></span> -->
+    <!-- <input type="checkbox" ng-checked="incrementUpvotes(comment)"></span> -->
 
 </div>
-<!-- <form ng-submit="incrementUpvotes()">
-<button type="submit">Submit Votes</button>
-</form> -->
-</body>
+<!-- </body>
 </html>
