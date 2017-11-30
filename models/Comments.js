@@ -3,7 +3,7 @@ var CommentSchema = new mongoose.Schema({
   title:String,
   price:String,
   upvotes:{type: Number, default: 0},
-  URL:String
+  URL:URL
  });
 
 CommentSchema.methods.upvote = function(cb) {
