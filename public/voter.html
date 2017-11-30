@@ -22,7 +22,7 @@
 <button ng-click="vote()">Submit Purchase</button>
 <div style="display:none;" id="submitted"><h1>Shopping Cart</h1>
 
-<div ng-repeat= "cand in votedCans">
+<div ng-repeat= "cand in votedCans | orderBy: 'title'">
     {{cand.title}} - price: {{cand.price}} {{cand.URL}}
 </div>
 </div>
