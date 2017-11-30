@@ -60,7 +60,7 @@ angular.module('comment',[])
 			}
 		for(i=0; i <toSend.length; i++){
 			$http.put("/comments/" + toSend[i]._id + "/upvote").success(function(resp){
-					numSend++;
+					numSent++;
 					if(numToSend==numSent){
 						$scope.votedCans = toSend;
 						$scope.getAll();
