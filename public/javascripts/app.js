@@ -43,5 +43,28 @@ angular.module('comment',[])
     			});
   		};
   $scope.getAll();
+	
+
+
+
+	$scope.vote = function() {
+		var numToSend = 0;
+		var numSent = 0;
+		var toSend = [];
+		for(var i = 0; i < $scope.comments.length; i++){
+			if($scope.comments[i].doVote){
+				numToSend++;
+				toSend.push($scope.comments[i]);
+			}
+			}
+		for(i=0; i <toSend.length; i++){
+			$http.put("/comments/" + toSend[i]._id).success(function(resp){
+					numSend++;
+					if(numToSend==numSent){
+						$scope.getAll();
+					}
+			});
+		}
+		}
 	}
 ]);

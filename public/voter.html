@@ -14,14 +14,14 @@
 <!-- </form> -->
 <h1>Current Candidates</h1>
 <div ng-repeat="comment in comments | orderBy: '-upvotes'">
-    <input type="checkbox">
+    <input type="checkbox" ng-model="comment.doVote">
     {{comment.title}}
    
 
 </div>
 <h1>Submitted Candidates</h1>
-<form ng-submit="incrementUpvotes()">
-<button type="submit">Submit Votes</button>
-</form> 
+
+<button ng-click="vote()">Submit Votes</button>
+
 </body>
 </html>
