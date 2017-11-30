@@ -37,11 +37,13 @@ body{
 <div class ="admin">
 <h1>Current Products</h1>
 </div>
+<div class = "input">
 <div ng-repeat="comment in comments | orderBy: ['-upvotes', 'title']">
    <span class="glyphicon glyphicon-remove" ng-click="delete(comment)"></span>
 <!-- <span class="glyphicon glyphicon-thumbs-up" ng-click="incrementUpvotes(comment)"></span> -->
 {{comment.title}} - price: {{comment.price}} - ordered: {{comment.upvotes}}
 <img class='pic' ng-src="{{comment.URL}}" />
+</div>
 </div>
 
 </body>
