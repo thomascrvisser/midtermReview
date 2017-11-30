@@ -23,7 +23,7 @@
 <div style="display:none;" id="submitted"><h1>Shopping Cart</h1>
 
 <div ng-repeat= "cand in votedCans | orderBy: 'title'">
-    {{cand.title}} - price: {{cand.price}} {{cand.URL}}
+    {{cand.title}} - price: {{cand.price}} <img class ='pic' ng-src="{{cand.URL}}" />
 </div>
 </div>
 
