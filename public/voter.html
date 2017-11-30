@@ -13,7 +13,7 @@
 
 <!-- </form> -->
 <h1>Current Products</h1>
-<div ng-repeat="comment in comments">
+<div ng-repeat="comment in comments | orderBy: 'title'">
     <input type="checkbox" ng-model="comment.doVote">
     {{comment.title}} - price: {{comment.price}} {{comment.URL}}
    
