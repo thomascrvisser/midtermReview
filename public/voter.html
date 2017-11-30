@@ -38,11 +38,11 @@ body{
     <input type="checkbox" ng-model="comment.doVote">
     {{comment.title}} - price: {{comment.price}}
    <img class ='pic' src="{{comment.URL}}" />
-
+</div>
 </div>
 <button ng-click="vote()">Submit Purchase</button>
 <div style="display:none;" id="submitted"><div class = "admin"><h1>Shopping Cart</h1></div>
-
+<div class="input">
 <div ng-repeat= "cand in votedCans | orderBy: 'title'">
     {{cand.title}} - price: {{cand.price}} <img class ='pic' ng-src="{{cand.URL}}" />
 </div>
