@@ -20,11 +20,12 @@
 
 </div>
 <button ng-click="vote()">Submit Votes</button>
-<h1>Submitted Candidates</h1>
+<div style="display:none;" id="submitted"><h1>Submitted Canditates</h1>>
+
 <div ng-repeat= "cand in votedCans">
     {{cand.title}}
 </div>
-
+</div>
 
 
 </body>
